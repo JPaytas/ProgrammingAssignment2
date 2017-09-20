@@ -52,5 +52,4 @@ solve(mdat)
 acm <- makeCacheMatrix(mdat)
 acm$get() ##Retrieves value of x
 acm$getinverse() ##retrives the value of m, which should be NULL
-cacheSolve(acm) ##notice the mean calculated is mean of 30 through 50
-acm$getinverse() ##retrieve it directly, now that it has been set
+cacheSolve(acm) ##returns the inverse of the matrix
