@@ -4,15 +4,15 @@
 ## Write a short comment describing this function
 ##This function creates a special "matrix" object that can cache its inverse
 makeCacheMatrix <- function(x = matrix()) {
-    inverse <- NULL ##Initialize M as NULL
+    inverse <- NULL ##Initialize inverse as NULL
     ##Setters and Getters (Access/Retrieve)
     set <- function(y) { 
         x <<- y ##Assign Input 
         inverse <<- NULL ##M NULL to clear Cache
     }
     get <- function() x ##x is being retrieved from parent
-    setinverse <- function(inverse) m <<- inverse ##Defines setter for the mean
-    getinverse <- function() inverse ##retrieve correct m
+    setinverse <- function(inverse) inverse <<- inverse #Defines the setter for the inverse
+    getinverse <- function() inverse ##retrieve correct inverse
     ##Set lists to names so they can be retrievable by $ operators, [] will not work!
     list(set = set, get = get, setinverse = setinverse, getinverse = getinverse) 
 }
